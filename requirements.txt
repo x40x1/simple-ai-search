@@ -1,0 +1,7 @@
+azure-core
+python-dotenv
+googlesearch-python
+sumy
+nltk
+requests
+beautifulsoup4
