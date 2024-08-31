@@ -13,8 +13,6 @@ from sumy.summarizers.lsa import LsaSummarizer
 import nltk
 import threading
 
-nltk.data.path.append('C:\\Users\\alexa\\AppData\\Roaming\\nltk_data')
-
 endpoint = "https://models.inference.ai.azure.com"
 model_name = "Mistral-large-2407"
 token = dotenv.get_key(".env", "GITHUB_TOKEN")
