@@ -43,7 +43,7 @@ def summarize_url(url):
     
     return " ".join([str(sentence) for sentence in summary])
 
-# Funktion zur Verarbeitung der Anfrage
+# Function for processing the query
 def process_query(query, text_widget):
     web_results = search_web(query)
     summaries = [summarize_url(url) for url in web_results]
@@ -63,16 +63,16 @@ def process_query(query, text_widget):
     answer = response.choices[0].message.content
     text_widget.insert(tk.END, "Antwort: " + answer + "\n\n\n\n\n\n\n\n")
 
-# Funktion zum Starten des Anfrage-Threads
+# Function for starting the request thread
 def start_query():
     query = query_entry.get()
     threading.Thread(target=process_query, args=(query, text_widget)).start()
 
-# GUI erstellen
+# Create GUI
 root = tk.Tk()
 root.title("Suchmaschine")
 
-# Grid-Layout verwenden
+# Use grid layout
 root.grid_rowconfigure(0, weight=1)
 root.grid_rowconfigure(1, weight=1)
 root.grid_rowconfigure(2, weight=10)
